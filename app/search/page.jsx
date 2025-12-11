@@ -10,7 +10,7 @@ import { products, collections, blogPosts } from '@/data/mockData'
 
 export default function SearchPage() {
   const [query, setQuery] = useState('')
-  const [activeTab, setActiveTab] = useState<'all' | 'products' | 'collections' | 'blog'>('all')
+  const [activeTab, setActiveTab] = useState('all')
   
   const searchProducts = products.filter((p) =>
     p.name.toLowerCase().includes(query.toLowerCase()) ||

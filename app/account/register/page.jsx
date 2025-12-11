@@ -14,7 +14,7 @@ export default function RegisterPage() {
     confirmPassword: '',
   })
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     // Handle registration
     console.log('Register:', formData)

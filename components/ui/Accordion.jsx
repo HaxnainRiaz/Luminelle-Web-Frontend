@@ -1,21 +1,11 @@
 'use client'
 
-import { useState, ReactNode } from 'react'
+import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
-interface AccordionItem {
-  title: string
-  content: ReactNode
-}
-
-interface AccordionProps {
-  items: AccordionItem[]
-  className?: string
-}
-
-export default function Accordion({ items, className }: AccordionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(0)
+export default function Accordion({ items, className }) {
+  const [openIndex, setOpenIndex] = useState(0)
   
   return (
     <div className={cn('space-y-4', className)}>
